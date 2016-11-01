@@ -16,47 +16,64 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
-    <nav>
-      <span>
-        <a [routerLink]=" ['./'] ">
-          Index
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./home'] ">
-          Home
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./detail'] ">
-          Detail
-        </a>
-      </span>
-      |
-      <span>
-        <a [routerLink]=" ['./about'] ">
-          About
-        </a>
-      </span>
-    </nav>
+<div id="layout" class="content pure-g">
+    <div id="nav" class="pure-u">
+        <a href="#" class="nav-menu-button">Meny</a>
+
+        <div class="nav-inner">
+            <div class="pure-menu">
+                <ul class="pure-menu-list">
+                    <li class="pure-menu-item"><a [routerLink]=" ['./'] " class="pure-menu-link">Hem</a></li>
+                    <li class="pure-menu-item"><a [routerLink]=" ['./about'] " class="pure-menu-link">Om Oss</a></li>
+                    <li class="pure-menu-item"><a [routerLink]=" ['./vehicles'] " class="pure-menu-link">Garagets fordon</a></li>
+                    <br />
+                    <img id="logo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIYmaeF7FNwzIOlAKS2xpz0S9WmXruyf-TYf87nTjDTyEL_4Nw"
+                         width="70%"/>
+                </ul>
+            </div>
+        </div>
+    </div>
 
     <main>
       <router-outlet></router-outlet>
     </main>
 
-    <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
     <footer>
-      <span>WebPack Angular 2 Starter by <a [href]="url">@AngularClass</a></span>
+      <span>Footer</span>
       <div>
-        <a [href]="url">
-          <img [src]="angularclassLogo" width="25%">
-        </a>
       </div>
     </footer>
-  `
+</div>
+`
+ //   <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+
+    // <nav>
+    //   <span>
+    //     <a [routerLink]=" ['./'] ">
+    //       Index
+    //     </a>
+    //   </span>
+    //   |
+    //   <span>
+    //     <a [routerLink]=" ['./home'] ">
+    //       Home
+    //     </a>
+    //   </span>
+    //   |
+    //   <span>
+    //     <a [routerLink]=" ['./detail'] ">
+    //       Detail
+    //     </a>
+    //   </span>
+    //   |
+    //   <span>
+    //     <a [routerLink]=" ['./about'] ">
+    //       About
+    //     </a>
+    //   </span>
+    // </nav>
+
+
 })
 export class AppComponent {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
@@ -73,7 +90,6 @@ export class AppComponent {
   }
 
 }
-
 /*
  * Please review the https://github.com/AngularClass/angular2-examples/ repo for
  * more angular app examples that you may copy/paste

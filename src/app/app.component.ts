@@ -17,8 +17,8 @@ import { AppState } from './app.service';
   ],
   template: `
 <div id="layout" class="content pure-g">
-    <div id="nav" class="pure-u">
-        <a href="#" class="nav-menu-button">Meny</a>
+   <div id="nav" class="pure-u" [class.active]="isNavbarActive">
+        <a href="#" class="nav-menu-button" (click)="toggleNavbar()">Meny</a>
 
         <div class="nav-inner">
             <div class="pure-menu">
@@ -54,23 +54,20 @@ import { AppState } from './app.service';
 
 })
 export class AppComponent {
-  angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name = 'Angular 2 Webpack Starter';
-  url = 'https://twitter.com/AngularClass';
+  angularclassLogo = 'assets/img/angularclass-avatar.png'
+  name = 'Angular 2 Webpack Starter'
+  url = 'https://twitter.com/AngularClass'
+  isNavbarActive = false
+  toggleNavbar = function(el) {
+    this.isNavbarActive = !this.isNavbarActive
+  };
 
   constructor(
     public appState: AppState) {
-
   }
 
   ngOnInit() {
     console.log('Initial App State', this.appState.state);
-
-    $('.nav-menu-button').on('click', function (e) {
-              $('#nav').toggleClass('active');
-          });
-
-    // alert("yo");
   }
 
 }

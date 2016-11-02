@@ -16,6 +16,8 @@ import { APP_RESOLVER_PROVIDERS } from './app.resolver';
 import { AppState, InternalStateType } from './app.service';
 import { HomeComponent } from './home';
 import { AboutComponent } from './about';
+import { ContactComponent } from './contact';
+import { VehiclesComponent } from './vehicles';
 import { NoContentComponent } from './no-content';
 import { XLarge } from './home/x-large';
 
@@ -39,7 +41,9 @@ type StoreType = {
   declarations: [
     AppComponent,
     AboutComponent,
+    ContactComponent,
     HomeComponent,
+    VehiclesComponent,
     NoContentComponent,
     XLarge
   ],

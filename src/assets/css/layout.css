@@ -176,12 +176,17 @@ a {
 
     /* This will now take up it's own column, so don't need position: fixed; */
     #main {
-        padding: 20px;
+        position: fixed;
+        top: 0;
+        /*padding-top: -20px;*/
         /*position: static;
         margin: 0;
         padding: 0;*/
     }
+}
 
+img#header {
+    margin: auto;
 }
 
 footer {
@@ -205,4 +210,73 @@ footer {
     display: block;
     margin: auto;
     width: 70%;
+}
+
+.about-content-header {
+    margin-bottom: 10px;
+}
+
+.about {
+    margin: 15px;
+}
+
+.about-content .contact {
+    margin: 20px;
+    float: left;
+    text-align: center;
+}
+
+#main {
+    /*background-color: #706a5e;*/
+    /*background-color: rgba(68, 63, 54, 0.94);*/
+    /*color: black;*/
+}
+
+/*h1 {
+    color: black;
+}
+
+p {
+    color
+}*/
+
+.vehicles-box {
+    margin: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: fit-content;
+    /*height: max-height;*/
+    background-color: rgba(68, 63, 54, 0.94);
+    /*background-color: white;*/
+    border-radius: 8px;
+}
+
+#lastvehicle {
+    clear:both;
+}
+
+.vehicle-info {
+    background-color: white;
+    /*background-color: #706a5e;*/
+    margin: 20px;
+    float: left;
+    /*width: 150px;*/
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 5px 10px 5px black;
+}
+
+/*#main {
+    max-width: 1020px;
+}*/
+
+/*.about-content .contact .role {
+}*/
+
+#nav {
+    background: rgb(32, 31, 29);
+}
+
+#nav .pure-menu-link {
+    color: #c28686;
 }

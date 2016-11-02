@@ -1,0 +1,53 @@
+<div class="vehicles-content">
+
+    <div class="vehicles-content-header pure-g">
+        <div class="pure-u-1-2">
+            <h1 class="email-content-title">Fordon</h1>
+        </div>
+    </div>
+
+    <div class="vehicles-content-body">
+
+        <p>
+            Samtliga fordon levereras med airbag, taklucka, top-Hifi.
+        </p>
+
+        <div class="vehicles-box">
+            <div class="vehicle-info" *ngFor="let vehicle of localState.vehicles">
+                <img [src]="vehicle.image" alt="">
+                <div class="vehicleinfo">
+                    <strong>{{vehicle.manufacturer}} {{vehicle.model}}</strong>
+                    <div>{{vehicle.color}}</div>
+                    <div>{{vehicle.weight}} kg</div>
+                    <div>{{vehicle.year}}</div>
+                </div>
+            </div>
+            <div id="lastvehicle">
+        </div>
+    </div>
+
+        <table class="pure-table">
+            <thead>
+                <tr>
+                    <th>#</th>
+                    <th>Tillverkare</th>
+                    <th>Model</th>
+                    <th>Färg</th>
+                    <th>Vikt</th>
+                    <th>Årtal</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr *ngFor="let vehicle of localState.vehicles">
+                <td>{{vehicle.id}}</td>
+                <td>{{vehicle.manufacturer}}</td>
+                <td>{{vehicle.model}}</td>
+                <td>{{vehicle.color}}</td>
+                <td>{{vehicle.weight}}</td>
+                <td>{{vehicle.year}}</td>
+                </tr>
+            </tbody>
+        </table>
+
+</div>

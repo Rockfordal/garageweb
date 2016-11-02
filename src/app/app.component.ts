@@ -1,14 +1,7 @@
-/*
- * Angular 2 decorators and services
- */
 import { Component, ViewEncapsulation } from '@angular/core';
 
 import { AppState } from './app.service';
 
-/*
- * App Component
- * Top Level Component
- */
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
@@ -16,6 +9,7 @@ import { AppState } from './app.service';
     './app.component.css'
   ],
   template: `
+
 <div id="layout" class="content pure-g">
    <div id="nav" class="pure-u" [class.active]="isNavbarActive">
         <a href="#" class="nav-menu-button" (click)="toggleNavbar()">Meny</a>
@@ -23,34 +17,32 @@ import { AppState } from './app.service';
         <div class="nav-inner">
             <div class="pure-menu">
                 <ul class="pure-menu-list">
-                    <li class="pure-menu-item"><a [routerLink]=" ['./'] " class="pure-menu-link">Hem</a></li>
-                    <li class="pure-menu-item"><a [routerLink]=" ['./about'] " class="pure-menu-link">Om Oss</a></li>
+                    <li class="pure-menu-item"><a [routerLink]=" ['./'] "         class="pure-menu-link">Hem</a></li>
+                    <li class="pure-menu-item"><a [routerLink]=" ['./about'] "    class="pure-menu-link">Om oss</a></li>
+                    <li class="pure-menu-item"><a [routerLink]=" ['./contact'] "  class="pure-menu-link">Kontakta Oss</a></li>
                     <li class="pure-menu-item"><a [routerLink]=" ['./vehicles'] " class="pure-menu-link">Garagets fordon</a></li>
                     <br />
-                    <img id="logo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIYmaeF7FNwzIOlAKS2xpz0S9WmXruyf-TYf87nTjDTyEL_4Nw" />
+                    <img id="logo" src="./assets/img/garage.jpg" />
                 </ul>
             </div>
         </div>
     </div>
 
     <main>
-      <router-outlet></router-outlet>
+      <div id="main" class="pure-u-1">
+        <img id="header" class="pure-img" src="./assets/img/carsingarage.jpg" />
+        <router-outlet></router-outlet>
+      </div>
     </main>
 
     <footer>
-      <span>Footer</span>
+      <span>&copy; 2016 test.com - Webmaster kurt@test.lab</span>
       <div>
       </div>
     </footer>
-/div>`
+</div>`
 
 // <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
-
-// <nav>
-//   <span> <a [routerLink]=" ['./'] "> Index </a> </span>
-//   |
-//   <span> <a [routerLink]=" ['./home'] "> Home </a> </span>
-//</nav>
 
 })
 export class AppComponent {

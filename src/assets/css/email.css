@@ -154,6 +154,9 @@ a {
         width: auto; /* so that it's not 100% */
     }
 
+    #logo {
+        display: none;
+    }
 }
 
 /*
@@ -179,24 +182,27 @@ a {
         padding: 0;*/
     }
 
-    }
+}
 
-    footer {
-        letter-spacing: normal;
-        position: fixed;
-        left: 0%;
-        bottom: 0%;
-        background: #111;
-        color: #666;
-        text-align: center;
-        padding: 1em;
-        font-size: 80%;
-        width: 100%;
-    }
+footer {
+    letter-spacing: normal;
+    position: fixed;
+    left: 0%;
+    bottom: 0%;
+    background: #111;
+    color: #666;
+    text-align: center;
+    padding: 1em;
+    font-size: 80%;
+    width: 100%;
+}
 
-    #logo {
-        display: block;
-        margin: auto;
-        }
+#nav.active #logo {
+    display: none;
+}
 
+#nav #logo {
+    display: block;
+    margin: auto;
+    width: 70%;
 }

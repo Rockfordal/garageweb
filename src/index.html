@@ -5,14 +5,13 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="<%= htmlWebpackPlugin.options.title %>">
-
-   <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-   <link rel="stylesheet" href="./assets/css/email.css">
-  <!--<link href="http://vjs.zencdn.net/5.11.9/video-js.css" rel="stylesheet">
-  <link rel="stylesheet" href="./video.css" />
+  <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+  <link rel="stylesheet" href="./assets/css/email.css">
+  <!--
   <link rel="stylesheet" href="./style.css" />
-  <link rel="stylesheet" href="./assets/css/layouts/side-menu.css">-->
-
+  <link href="http://vjs.zencdn.net/5.11.9/video-js.css" rel="stylesheet">
+  <link rel="stylesheet" href="./video.css" />
+  -->
 
   <title><%= htmlWebpackPlugin.options.title %></title>
 
@@ -41,33 +40,24 @@
     ga('send', 'pageview');
   </script>-->
 
+  <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
+
+<!--<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>-->
+<script src="https://code.jquery.com/jquery-3.1.1.slim.min.js"></script>
+
   <% if (htmlWebpackPlugin.options.metadata.isDevServer && htmlWebpackPlugin.options.metadata.HMR !== true) { %>
   <!-- Webpack Dev Server reload -->
   <script src="/webpack-dev-server.js"></script>
   <% } %>
 
-  <script src="http://yui.yahooapis.com/3.17.2/build/yui/yui-min.js"></script>
-
-  <script>
-      YUI().use('node-base', 'node-event-delegate', function (Y) {
-          alert("here"); // aj a
-
-          var menuButton = Y.one('.nav-menu-button'),
-              nav        = Y.one('#nav');
-
-          // Setting the active class name expands the menu vertically on small screens.
-          menuButton.on('click', function (e) {
-              nav.toggleClass('active');
-          });
-
-          alert("here");
-
-      });
-  </script>
-
-  <!--<script src="js/ui.js"></script>-->
   <!--<script src="http://vjs.zencdn.net/ie8/1.1.2/videojs-ie8.min.js"></script>-->
   <!--<script src="http://vjs.zencdn.net/5.11.9/video.js"></script>-->
+
+<!--<script>
+  $(document).ready(function() {
+      alert("javascript is ready!");
+  }); 
+</script>-->
 
 </body>
 </html>

@@ -27,8 +27,7 @@ import { AppState } from './app.service';
                     <li class="pure-menu-item"><a [routerLink]=" ['./about'] " class="pure-menu-link">Om Oss</a></li>
                     <li class="pure-menu-item"><a [routerLink]=" ['./vehicles'] " class="pure-menu-link">Garagets fordon</a></li>
                     <br />
-                    <img id="logo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIYmaeF7FNwzIOlAKS2xpz0S9WmXruyf-TYf87nTjDTyEL_4Nw"
-                         width="70%"/>
+                    <img id="logo" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSIYmaeF7FNwzIOlAKS2xpz0S9WmXruyf-TYf87nTjDTyEL_4Nw" />
                 </ul>
             </div>
         </div>
@@ -43,36 +42,15 @@ import { AppState } from './app.service';
       <div>
       </div>
     </footer>
-</div>
-`
- //   <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
+/div>`
 
-    // <nav>
-    //   <span>
-    //     <a [routerLink]=" ['./'] ">
-    //       Index
-    //     </a>
-    //   </span>
-    //   |
-    //   <span>
-    //     <a [routerLink]=" ['./home'] ">
-    //       Home
-    //     </a>
-    //   </span>
-    //   |
-    //   <span>
-    //     <a [routerLink]=" ['./detail'] ">
-    //       Detail
-    //     </a>
-    //   </span>
-    //   |
-    //   <span>
-    //     <a [routerLink]=" ['./about'] ">
-    //       About
-    //     </a>
-    //   </span>
-    // </nav>
+// <pre class="app-state">this.appState.state = {{ appState.state | json }}</pre>
 
+// <nav>
+//   <span> <a [routerLink]=" ['./'] "> Index </a> </span>
+//   |
+//   <span> <a [routerLink]=" ['./home'] "> Home </a> </span>
+//</nav>
 
 })
 export class AppComponent {
@@ -87,13 +65,12 @@ export class AppComponent {
 
   ngOnInit() {
     console.log('Initial App State', this.appState.state);
+
+    $('.nav-menu-button').on('click', function (e) {
+              $('#nav').toggleClass('active');
+          });
+
+    // alert("yo");
   }
 
 }
-/*
- * Please review the https://github.com/AngularClass/angular2-examples/ repo for
- * more angular app examples that you may copy/paste
- * (The examples may not be updated as quickly. Please open an issue on github for us to update it)
- * For help or questions please contact us at @AngularClass on twitter
- * or our chat on Slack at https://AngularClass.com/slack-join
- */

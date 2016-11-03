@@ -6,9 +6,27 @@ import { ActivatedRoute } from '@angular/router';
 @Component({
   selector: 'about',
   styles: [`
+    .about-content-header {
+        margin-bottom: 10px;
+    }
+
+    .about {
+        margin: 15px;
+    }
+
+    .about-content .contact {
+        margin: 20px;
+        float: left;
+        text-align: center;
+    }
+
+/*.about-content .contact .role {
+}*/
+
   `],
   templateUrl: './about.component.html'
 })
+
 export class AboutComponent {
   localState: any;
   constructor(public route: ActivatedRoute) {

@@ -2,6 +2,16 @@
  * @author: @AngularClass
  */
 
+module.exports = {
+  resolve: { 
+    modules: [ path.join(__dirname, "node_modules") ]
+  },
+  alias: {
+    vex: 'vex-js'
+  }
+};
+
+
 // Look in ./config folder for webpack.dev.js
 switch (process.env.NODE_ENV) {
   case 'prod':

@@ -13,41 +13,63 @@
         </p>
 
         <div class="vehicles-box">
-            <div class="vehicle-info" *ngFor="let vehicle of localState.vehicles">
+            <div class="vehicle-info" *ngFor="let vehicle of localState.vehicles; let i=index">
                 <img [src]="vehicle.image" alt="">
                 <div class="vehicleinfo">
                     <strong>{{vehicle.manufacturer}} {{vehicle.model}}</strong>
                     <div>{{vehicle.color}}</div>
                     <div>{{vehicle.weight}} kg</div>
                     <div>{{vehicle.year}}</div>
+                    <i (click)="remove(i)" class="fa fa-trash"></i>
                 </div>
             </div>
             <div id="lastvehicle">
         </div>
     </div>
 
-        <table class="pure-table">
-            <thead>
-                <tr>
-                    <th>#</th>
-                    <th>Tillverkare</th>
-                    <th>Model</th>
-                    <th>Färg</th>
-                    <th>Vikt</th>
-                    <th>Årtal</th>
-                </tr>
-            </thead>
+    <!--<i [routerLink]=" []}"  class="fa fa-plus"></i>-->
+    <!--<li class="pure-menu-item"><a [routerLink]=" ['./'] "         class="pure-menu-link">Hem</a></li>-->
+    <!--<div class="vex-dialog-message">{{context.message}}</div>-->
 
-            <tbody>
-                <tr *ngFor="let vehicle of localState.vehicles">
-                <td>{{vehicle.id}}</td>
-                <td>{{vehicle.manufacturer}}</td>
-                <td>{{vehicle.model}}</td>
-                <td>{{vehicle.color}}</td>
-                <td>{{vehicle.weight}}</td>
-                <td>{{vehicle.year}}</td>
-                </tr>
-            </tbody>
-        </table>
+    <button (click)="Add()" class="pure-button">
+        <i class="fa fa-plus"></i>
+        Lägg till
+    </button>
+
+    <!--<div class="vex-dialog-message">Meddelande</div>
+
+    <div class="vex-dialog-input">
+        <input name="vex" 
+               type="text" 
+               class="vex-dialog-prompt-input">
+    </div>
+    -->
+
+    <!--placeholder="{{context.placeholder}}">-->
+    <!--[(ngModel)]="context.defaultResult" -->
+
+    <!--<table class="pure-table">
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>Tillverkare</th>
+                <th>Model</th>
+                <th>Färg</th>
+                <th>Vikt</th>
+                <th>Årtal</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let vehicle of localState.vehicles">
+            <td>{{vehicle.id}}</td>
+            <td>{{vehicle.manufacturer}}</td>
+            <td>{{vehicle.model}}</td>
+            <td>{{vehicle.color}}</td>
+            <td>{{vehicle.weight}}</td>
+            <td>{{vehicle.year}}</td>
+            </tr>
+        </tbody>
+    </table>-->
 
 </div>

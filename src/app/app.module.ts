@@ -5,6 +5,18 @@ import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 
+import {VgCore} from 'videogular2/core';
+import { ModalModule } from 'angular2-modal';
+// import { BootstrapModalModule } from 'angular2-modal/plugins/bootstrap';
+
+// import { VexModalModule } from 'angular2-modal/plugins/vex';
+import {
+    DialogPreset,
+    VEXDialogButtons
+} from 'angular2-modal/plugins/vex/index';
+
+// import {VgCore} from '../../node_modules/videogular2/core';
+
 /*
  * Platform and Environment providers/directives/pipes
  */
@@ -45,12 +57,15 @@ type StoreType = {
     HomeComponent,
     VehiclesComponent,
     NoContentComponent,
+    VEXDialogButtons,
     XLarge
   ],
   imports: [ // import Angular's modules
     BrowserModule,
     FormsModule,
     HttpModule,
+    // VexModalModule,
+    // VgCore,
     RouterModule.forRoot(ROUTES, { useHash: true })
   ],
   providers: [ // expose our Services and Providers into Angular's dependency injection
